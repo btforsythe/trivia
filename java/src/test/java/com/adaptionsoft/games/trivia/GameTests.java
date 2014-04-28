@@ -59,4 +59,20 @@ public class GameTests {
 
         assertEquals(playerNameAndNumber, stream.toString());
     }
+
+    @Test
+    public void whenRollingDiceSomethingHappens(){
+        ByteArrayOutputStream stream = getConsoleOutput();
+        game.add("SomePlayer");
+
+        game.roll(1);
+
+        assertEquals("SomePlayer was added\n" +
+                "They are player number 1\n" +
+                "SomePlayer is the current player\n" +
+                "They have rolled a 1\n" +
+                "SomePlayer's new location is 1\n" +
+                "The category is Science\n" +
+                "Science Question 0\n", stream.toString());
+    }
 }
