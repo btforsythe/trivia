@@ -37,4 +37,22 @@ public class GameTests {
         assertEquals(playerNameAndNumber, stream.toString());
     }
 
+    @Test
+    public void whenTwoPlayersAreAddedTheirNameAndPlayerNumbersAreWritten(){
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(stream);
+        System.setOut(printStream);
+        String playerNameAndNumber = "Adi was added\n" +
+                "They are player number 1\n" +
+                "Alex was added\n" +
+                "They are player number 2\n";
+        String playerName = "Adi";
+        String secondPlayerName = "Alex";
+        Game game = new Game();
+
+        game.add(playerName);
+        game.add(secondPlayerName);
+
+        assertEquals(playerNameAndNumber, stream.toString());
+    }
 }
