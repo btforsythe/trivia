@@ -8,10 +8,10 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class SomeTest {
+public class GameTests {
 
     @Test
-    public void whenGameIsCreatedSomethingHappens(){
+    public void whenGameIsCreatedNothingIsWrittenToTheOutput(){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(stream);
         System.setOut(printStream);
@@ -23,16 +23,18 @@ public class SomeTest {
     }
 
     @Test
-    public void whenPlayerIsAddedHisNameIsWritten(){
+    public void whenPlayerIsAddedHisNameAndPlayerNumberIsWritten(){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(stream);
         System.setOut(printStream);
+        String playerNameAndNumber = "Adi was added\n" +
+                "They are player number 1\n";
+        String playerName = "Adi";
         Game game = new Game();
 
-        game.add("Adi");
+        game.add(playerName);
 
-        assertEquals("Adi was added\n" +
-                "They are player number 1\n", stream.toString());
+        assertEquals(playerNameAndNumber, stream.toString());
     }
 
 }
