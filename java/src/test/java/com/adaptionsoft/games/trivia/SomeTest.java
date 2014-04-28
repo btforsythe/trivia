@@ -21,4 +21,18 @@ public class SomeTest {
 
         assertEquals(emptyString, stream.toString());
     }
+
+    @Test
+    public void whenPlayerIsAddedHisNameIsWritten(){
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(stream);
+        System.setOut(printStream);
+        Game game = new Game();
+
+        game.add("Adi");
+
+        assertEquals("Adi was added\n" +
+                "They are player number 1\n", stream.toString());
+    }
+
 }
