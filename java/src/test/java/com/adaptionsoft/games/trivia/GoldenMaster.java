@@ -28,11 +28,15 @@ public class GoldenMaster {
 
     public void generateGoldenMaster() throws IOException {
         for(long seed=0; seed < MAX_SEED; seed++){
-            FileUtils.write(new File("goldenMasterData/" + seed + ".txt"), getGameResult(seed));
+            FileUtils.write(generateFile(seed), getGameResult(seed));
         }
     }
 
+    private File generateFile(long seed) {
+        return new File("goldenMasterData/" + seed + ".txt");
+    }
+
     public String getGoldenMaster(long seed) throws IOException{
-        return FileUtils.readFileToString(new File("goldenMasterData/" + seed + ".txt"));
+        return FileUtils.readFileToString(generateFile(seed));
     }
 }
