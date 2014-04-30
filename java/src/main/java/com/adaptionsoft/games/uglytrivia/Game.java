@@ -40,13 +40,17 @@ public class Game {
 	    players.add(playerName);
         int numberOfPlayers = howManyPlayers();
         resetPlacesForAddedPlayer(numberOfPlayers);
-        purses[numberOfPlayers] = 0;
+        resetPursesForAddedPlayer(numberOfPlayers);
         addedPlayerNotInPenaltyBox(numberOfPlayers);
 
         writePlayerWasAddedToGame(playerName);
         writeTheNumberOfAddedPlayer();
         return true;
 	}
+
+    private void resetPursesForAddedPlayer(int numberOfPlayers) {
+        purses[numberOfPlayers] = 0;
+    }
 
     private void resetPlacesForAddedPlayer(int numberOfPlayers) {
         places[numberOfPlayers] = 0;
