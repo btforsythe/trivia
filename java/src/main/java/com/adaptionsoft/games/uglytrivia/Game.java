@@ -65,7 +65,8 @@ public class Game {
     }
 
     private void writeTheNumberOfAddedPlayer() {
-        System.out.println("They are player number " + players.size());
+        String playerNumberText = "They are player number " + players.size();
+        System.out.println(playerNumberText);
     }
 
     private void writePlayerWasAddedToGame(String playerName) {
