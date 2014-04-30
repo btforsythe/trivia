@@ -41,13 +41,13 @@ public class Game {
     private boolean addPlayerName(String playerName) {
         registerNewPlayerName(playerName);
 
-        resetPlacesForAddedPlayer();
-        resetPursesForAddedPlayer();
+        placesResetForAddedPlayer();
+        pursesResetForAddedPlayer();
 
-        addedPlayerNotInPenaltyBox();
+        playerAddedNotInPenaltyBox();
 
-        writePlayerWasAddedToGame(playerName);
-        writeTheNumberOfAddedPlayer();
+        playerWriteWasAddedToGame(playerName);
+        playerWriteTheNumberOfAddedPlayer();
 
         return true;
     }
@@ -56,20 +56,20 @@ public class Game {
         players.add(playerName);
     }
 
-    private void resetPursesForAddedPlayer() {
-        purses[indexOfCurrentPlayer()] = 0;
+    private void pursesResetForAddedPlayer() {
+        purses[playerIndexOfCurrentPlayer()] = 0;
     }
 
-    private void resetPlacesForAddedPlayer() {
-        places[indexOfCurrentPlayer()] = 0;
+    private void placesResetForAddedPlayer() {
+        places[playerIndexOfCurrentPlayer()] = 0;
     }
 
-    private void writeTheNumberOfAddedPlayer() {
+    private void playerWriteTheNumberOfAddedPlayer() {
         String playerNumberText = "They are player number " + players.size();
         consoleWriteText(playerNumberText);
     }
 
-    private void writePlayerWasAddedToGame(String playerName) {
+    private void playerWriteWasAddedToGame(String playerName) {
         String playerNameAddedText = playerName + " was added";
         consoleWriteText(playerNameAddedText);
     }
@@ -78,15 +78,15 @@ public class Game {
         System.out.println(someText);
     }
 
-    private void addedPlayerNotInPenaltyBox() {
-        inPenaltyBox[indexOfCurrentPlayer()] = false;
+    private void playerAddedNotInPenaltyBox() {
+        inPenaltyBox[playerIndexOfCurrentPlayer()] = false;
     }
 
     public int howManyPlayers() {
-        return indexOfCurrentPlayer();
+        return playerIndexOfCurrentPlayer();
     }
 
-    private int indexOfCurrentPlayer() {
+    private int playerIndexOfCurrentPlayer() {
         return players.size();
     }
 
