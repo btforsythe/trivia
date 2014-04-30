@@ -34,7 +34,7 @@ public class Game {
 		return (howManyPlayers() >= 2);
 	}
 
-	public boolean addPlayerName(String playerName) {
+	public boolean add(String playerName) {
         registerNewPlayerName(playerName);
 
         resetPlacesForAddedPlayer();

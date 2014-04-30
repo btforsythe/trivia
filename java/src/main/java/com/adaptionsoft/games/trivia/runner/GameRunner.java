@@ -11,9 +11,9 @@ public class GameRunner {
 	public static void main(String[] args) {
 		Game aGame = new Game();
 		
-		aGame.addPlayerName("Chet");
-		aGame.addPlayerName("Pat");
-		aGame.addPlayerName("Sue");
+		aGame.add("Chet");
+		aGame.add("Pat");
+		aGame.add("Sue");
 		
 		Random rand = new Random();
 	
