@@ -43,10 +43,14 @@ public class Game {
 	    purses[numberOfPlayers] = 0;
         addedPlayerNotInPenaltyBox(numberOfPlayers);
 
-        System.out.println(playerName + " was added");
-	    System.out.println("They are player number " + players.size());
+        writePlayerWasAddedToGame(playerName);
+        System.out.println("They are player number " + players.size());
 		return true;
 	}
+
+    private void writePlayerWasAddedToGame(String playerName) {
+        System.out.println(playerName + " was added");
+    }
 
     private void addedPlayerNotInPenaltyBox(int numberOfPlayers) {
         inPenaltyBox[numberOfPlayers] = false;
