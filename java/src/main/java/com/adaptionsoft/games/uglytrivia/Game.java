@@ -44,9 +44,13 @@ public class Game {
         addedPlayerNotInPenaltyBox(numberOfPlayers);
 
         writePlayerWasAddedToGame(playerName);
-        System.out.println("They are player number " + players.size());
-		return true;
+        writeTheNumberOfAddedPlayer();
+        return true;
 	}
+
+    private void writeTheNumberOfAddedPlayer() {
+        System.out.println("They are player number " + players.size());
+    }
 
     private void writePlayerWasAddedToGame(String playerName) {
         System.out.println(playerName + " was added");
