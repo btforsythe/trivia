@@ -35,9 +35,9 @@ public class Game {
 	}
 
 	public boolean addPlayer(String playerName) {
-		
-		
-	    players.add(playerName);
+
+
+        registerNewPlayerName(playerName);
         int numberOfPlayers = howManyPlayers();
         resetPlacesForAddedPlayer(numberOfPlayers);
         resetPursesForAddedPlayer(numberOfPlayers);
@@ -47,6 +47,10 @@ public class Game {
         writeTheNumberOfAddedPlayer();
         return true;
 	}
+
+    private void registerNewPlayerName(String playerName) {
+        players.add(playerName);
+    }
 
     private void resetPursesForAddedPlayer(int numberOfPlayers) {
         purses[numberOfPlayers] = 0;
