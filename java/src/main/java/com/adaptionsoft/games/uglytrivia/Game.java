@@ -34,16 +34,17 @@ public class Game {
 		return (howManyPlayers() >= 2);
 	}
 
-	public boolean addPlayer(String playerName) {
-
-
+	public boolean addPlayerName(String playerName) {
         registerNewPlayerName(playerName);
+
         resetPlacesForAddedPlayer();
         resetPursesForAddedPlayer();
+
         addedPlayerNotInPenaltyBox();
 
         writePlayerWasAddedToGame(playerName);
         writeTheNumberOfAddedPlayer();
+
         return true;
 	}
 

@@ -39,7 +39,7 @@ public class GameTests {
                 "They are player number 1\n";
         String playerName = "Adi";
 
-        game.addPlayer(playerName);
+        game.addPlayerName(playerName);
 
         assertEquals(playerNameAndNumber, stream.toString());
     }
@@ -54,8 +54,8 @@ public class GameTests {
         String playerName = "Adi";
         String secondPlayerName = "Alex";
 
-        game.addPlayer(playerName);
-        game.addPlayer(secondPlayerName);
+        game.addPlayerName(playerName);
+        game.addPlayerName(secondPlayerName);
 
         assertEquals(playerNameAndNumber, stream.toString());
     }
@@ -63,7 +63,7 @@ public class GameTests {
     @Test
     public void whenRollingDiceMessageAboutDiceAndPlayerLocationAndCategoryIsWrittenToOutput(){
         ByteArrayOutputStream stream = getConsoleOutput();
-        game.addPlayer("SomePlayer");
+        game.addPlayerName("SomePlayer");
 
         game.roll(1);
 
