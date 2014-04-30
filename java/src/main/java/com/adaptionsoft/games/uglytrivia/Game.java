@@ -70,7 +70,8 @@ public class Game {
     }
 
     private void writePlayerWasAddedToGame(String playerName) {
-        System.out.println(playerName + " was added");
+        String playerNameAddedText = playerName + " was added";
+        System.out.println(playerNameAddedText);
     }
 
     private void addedPlayerNotInPenaltyBox() {
