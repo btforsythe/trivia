@@ -61,7 +61,7 @@ public class GameTests {
     }
 
     @Test
-    public void whenRollingDiceSomethingHappens(){
+    public void whenRollingDiceMessageAboutDiceAndPlayerLocationAndCategoryIsWrittenToOutput(){
         ByteArrayOutputStream stream = getConsoleOutput();
         game.add("SomePlayer");
 
