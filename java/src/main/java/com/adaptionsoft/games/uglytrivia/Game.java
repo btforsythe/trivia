@@ -35,6 +35,10 @@ public class Game {
 	}
 
 	public boolean add(String playerName) {
+        return addPlayerName(playerName);
+	}
+
+    private boolean addPlayerName(String playerName) {
         registerNewPlayerName(playerName);
 
         resetPlacesForAddedPlayer();
@@ -46,7 +50,7 @@ public class Game {
         writeTheNumberOfAddedPlayer();
 
         return true;
-	}
+    }
 
     private void registerNewPlayerName(String playerName) {
         players.add(playerName);
