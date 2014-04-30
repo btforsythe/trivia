@@ -38,10 +38,9 @@ public class Game {
 
 
         registerNewPlayerName(playerName);
-        int indexOfAddedPlayer = indexOfCurrentPlayer();
-        resetPlacesForAddedPlayer(indexOfAddedPlayer);
-        resetPursesForAddedPlayer(indexOfAddedPlayer);
-        addedPlayerNotInPenaltyBox(indexOfAddedPlayer);
+        resetPlacesForAddedPlayer(indexOfCurrentPlayer());
+        resetPursesForAddedPlayer(indexOfCurrentPlayer());
+        addedPlayerNotInPenaltyBox(indexOfCurrentPlayer());
 
         writePlayerWasAddedToGame(playerName);
         writeTheNumberOfAddedPlayer();
