@@ -38,10 +38,10 @@ public class Game {
 
 
         registerNewPlayerName(playerName);
-        int numberOfPlayers = howManyPlayers();
-        resetPlacesForAddedPlayer(numberOfPlayers);
-        resetPursesForAddedPlayer(numberOfPlayers);
-        addedPlayerNotInPenaltyBox(numberOfPlayers);
+        int indexOfAddedPlayer = howManyPlayers();
+        resetPlacesForAddedPlayer(indexOfAddedPlayer);
+        resetPursesForAddedPlayer(indexOfAddedPlayer);
+        addedPlayerNotInPenaltyBox(indexOfAddedPlayer);
 
         writePlayerWasAddedToGame(playerName);
         writeTheNumberOfAddedPlayer();
@@ -52,12 +52,12 @@ public class Game {
         players.add(playerName);
     }
 
-    private void resetPursesForAddedPlayer(int numberOfPlayers) {
-        purses[numberOfPlayers] = 0;
+    private void resetPursesForAddedPlayer(int indexOfAddedPlayer) {
+        purses[indexOfAddedPlayer] = 0;
     }
 
-    private void resetPlacesForAddedPlayer(int numberOfPlayers) {
-        places[numberOfPlayers] = 0;
+    private void resetPlacesForAddedPlayer(int indexOfAddedPlayer) {
+        places[indexOfAddedPlayer] = 0;
     }
 
     private void writeTheNumberOfAddedPlayer() {
