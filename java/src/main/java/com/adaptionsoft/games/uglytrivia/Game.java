@@ -73,10 +73,14 @@ public class Game {
     }
 
     public int howManyPlayers() {
-		return players.size();
-	}
+        return indexOfCurrentPlayer();
+    }
 
-	public void roll(int roll) {
+    private int indexOfCurrentPlayer() {
+        return players.size();
+    }
+
+    public void roll(int roll) {
 		System.out.println(players.get(currentPlayer) + " is the current player");
 		System.out.println("They have rolled a " + roll);
 		
