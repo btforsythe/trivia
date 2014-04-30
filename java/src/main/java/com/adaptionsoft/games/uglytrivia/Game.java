@@ -66,12 +66,16 @@ public class Game {
 
     private void writeTheNumberOfAddedPlayer() {
         String playerNumberText = "They are player number " + players.size();
-        System.out.println(playerNumberText);
+        consoleWriteText(playerNumberText);
     }
 
     private void writePlayerWasAddedToGame(String playerName) {
         String playerNameAddedText = playerName + " was added";
-        System.out.println(playerNameAddedText);
+        consoleWriteText(playerNameAddedText);
+    }
+
+    private void consoleWriteText(String someText) {
+        System.out.println(someText);
     }
 
     private void addedPlayerNotInPenaltyBox() {
@@ -87,8 +91,8 @@ public class Game {
     }
 
     public void roll(int roll) {
-		System.out.println(players.get(currentPlayer) + " is the current player");
-		System.out.println("They have rolled a " + roll);
+        consoleWriteText(players.get(currentPlayer) + " is the current player");
+        System.out.println("They have rolled a " + roll);
 		
 		if (inPenaltyBox[currentPlayer]) {
 			if (roll % 2 != 0) {
