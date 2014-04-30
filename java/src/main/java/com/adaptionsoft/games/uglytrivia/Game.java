@@ -39,7 +39,7 @@ public class Game {
 	}
 
     private boolean addPlayerName(String playerName) {
-        registerNewPlayerName(playerName);
+        playerRegisterNewPlayerName(playerName);
 
         placesResetForAddedPlayer();
         pursesResetForAddedPlayer();
@@ -52,7 +52,7 @@ public class Game {
         return true;
     }
 
-    private void registerNewPlayerName(String playerName) {
+    private void playerRegisterNewPlayerName(String playerName) {
         players.add(playerName);
     }
 
