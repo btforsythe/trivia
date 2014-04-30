@@ -52,16 +52,16 @@ public class Game {
         return true;
     }
 
-    private void playerRegisterNewPlayerName(String playerName) {
-        players.add(playerName);
-    }
-
     private void pursesResetForAddedPlayer() {
         purses[playerIndexOfCurrentPlayer()] = 0;
     }
 
     private void placesResetForAddedPlayer() {
         places[playerIndexOfCurrentPlayer()] = 0;
+    }
+
+    private void playerRegisterNewPlayerName(String playerName) {
+        players.add(playerName);
     }
 
     private void playerWriteTheNumberOfAddedPlayer() {
@@ -74,20 +74,20 @@ public class Game {
         consoleWriteText(playerNameAddedText);
     }
 
-    private void consoleWriteText(String someText) {
-        System.out.println(someText);
-    }
-
     private void playerAddedNotInPenaltyBox() {
         inPenaltyBox[playerIndexOfCurrentPlayer()] = false;
     }
 
-    public int howManyPlayers() {
-        return playerIndexOfCurrentPlayer();
-    }
-
     private int playerIndexOfCurrentPlayer() {
         return players.size();
+    }
+
+    private void consoleWriteText(String someText) {
+        System.out.println(someText);
+    }
+
+    public int howManyPlayers() {
+        return playerIndexOfCurrentPlayer();
     }
 
     public void roll(int roll) {
