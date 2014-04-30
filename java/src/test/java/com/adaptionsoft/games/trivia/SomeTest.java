@@ -5,8 +5,14 @@ import org.junit.Test;
 
 public class SomeTest {
 
-	@Test
-	public void true_is_true() throws Exception {
-		assertTrue(false);
-	}
+    @Test
+    public void checkTriviaAgainstGoldenMaster() throws Exception{
+        GoldenMaster goldenMaster = new GoldenMaster();
+
+        for(long seed = 0; seed< 1000; seed++){
+            String expected = goldenMaster.getGoldenMaster(seed);
+            String actual = goldenMaster.getGameResult(seed);
+            assertEquals(expected, actual);
+        }
+    }
 }
