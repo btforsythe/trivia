@@ -40,14 +40,12 @@ public class Game {
 
     private boolean addPlayerName(String playerName) {
         playerRegisterNewPlayerName(playerName);
+        playerAddedNotInPenaltyBox();
+        playerWriteWasAddedToGame(playerName);
+        playerWriteTheNumberOfAddedPlayer();
 
         placesResetForAddedPlayer();
         pursesResetForAddedPlayer();
-
-        playerAddedNotInPenaltyBox();
-
-        playerWriteWasAddedToGame(playerName);
-        playerWriteTheNumberOfAddedPlayer();
 
         return true;
     }
