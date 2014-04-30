@@ -13,6 +13,9 @@ import java.util.Random;
  * Created by adi on 4/30/14.
  */
 public class GoldenMaster {
+
+    public static final int MAX_SEED = 1000;
+
     public String getGameResult(long seed){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(stream);
@@ -24,7 +27,7 @@ public class GoldenMaster {
     }
 
     public void generateGoldenMaster() throws IOException {
-        for(long seed=0; seed < 1000; seed++){
+        for(long seed=0; seed < MAX_SEED; seed++){
             FileUtils.write(new File("goldenMasterData/" + seed + ".txt"), getGameResult(seed));
         }
     }

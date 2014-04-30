@@ -9,7 +9,7 @@ public class SomeTest {
     public void checkTriviaAgainstGoldenMaster() throws Exception{
         GoldenMaster goldenMaster = new GoldenMaster();
 
-        for(long seed = 0; seed< 1000; seed++){
+        for(long seed = 0; seed< GoldenMaster.MAX_SEED; seed++){
             String expected = goldenMaster.getGoldenMaster(seed);
             String actual = goldenMaster.getGameResult(seed);
             assertEquals(expected, actual);
