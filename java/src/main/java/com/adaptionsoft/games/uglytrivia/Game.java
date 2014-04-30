@@ -35,10 +35,10 @@ public class Game {
 	}
 
 	public boolean add(String playerName) {
-        return addPlayerName(playerName);
+        return playerAddByName(playerName);
 	}
 
-    private boolean addPlayerName(String playerName) {
+    private boolean playerAddByName(String playerName) {
         playerRegisterNewPlayerName(playerName);
         playerAddedNotInPenaltyBox();
         playerWriteWasAddedToGame(playerName);
