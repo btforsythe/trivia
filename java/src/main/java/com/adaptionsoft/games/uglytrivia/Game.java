@@ -39,14 +39,18 @@ public class Game {
 		
 	    players.add(playerName);
         int numberOfPlayers = howManyPlayers();
-        places[numberOfPlayers] = 0;
-	    purses[numberOfPlayers] = 0;
+        resetPlacesForAddedPlayer(numberOfPlayers);
+        purses[numberOfPlayers] = 0;
         addedPlayerNotInPenaltyBox(numberOfPlayers);
 
         writePlayerWasAddedToGame(playerName);
         writeTheNumberOfAddedPlayer();
         return true;
 	}
+
+    private void resetPlacesForAddedPlayer(int numberOfPlayers) {
+        places[numberOfPlayers] = 0;
+    }
 
     private void writeTheNumberOfAddedPlayer() {
         System.out.println("They are player number " + players.size());
